@@ -1,0 +1,100 @@
+article {
+	display: grid;
+	place-items: center;
+	clip-path: polygon(0 5px, 100% 5px, 100% calc(100% - 5px), 0 calc(100% - 5px));
+}
+article > * {
+	grid-area: 1 / 1;
+}
+
+section {
+	width: 30rem;
+	height: 30rem;
+	position: relative;
+}
+.top {
+	background-image: url("WhatsApp\ Image\ 2023-11-28\ at\ 12.25.03_16b7180f.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	translate: 0 -5px;
+	transition: 1.2s ease;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% 100%,
+		0 100%,
+		0 0,
+		10% 0,
+		10% 100%,
+		20% 100%,
+		20% 0,
+		30% 0,
+		30% 100%,
+		40% 100%,
+		40% 0,
+		50% 0,
+		50% 100%,
+		60% 100%,
+		60% 0,
+		70% 0,
+		70% 100%,
+		80% 100%,
+		80% 0,
+		90% 0,
+		90% 100%,
+		100% 100%,
+		100% 0
+	);
+}
+.bottom {
+	background-image: url("WhatsApp\ Image\ 2023-11-28\ at\ 12.25.03_16b7180f.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	translate: 0 5px;
+	transition: 0.3s ease;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% 100%,
+		0 100%,
+		0 0,
+		0 100%,
+		10% 100%,
+		10% 0,
+		20% 0,
+		20% 100%,
+		30% 100%,
+		30% 0,
+		40% 0,
+		40% 100%,
+		50% 100%,
+		50% 0,
+		60% 0,
+		60% 100%,
+		70% 100%,
+		70% 0,
+		80% 0,
+		80% 100%,
+		90% 100%,
+		90% 0
+	);
+}
+article:hover .top,
+article:hover .bottom {
+	translate: 0 0;
+}
+
+*,
+* + * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	background: linear-gradient(140deg, rgb(105, 255, 153), purple);
+}
